@@ -1,0 +1,99 @@
+$sizes: ("xs":320px, "sm":576px, "md":768px, "lg":992px, "xl":1200px);
+@mixin media($minmax, $media) {
+    @each $size, $resolution in $sizes {
+      @if $media == $size {
+        @media only screen and (#{$minmax}-width: $resolution) {
+          @content;
+        }
+      } 
+    }
+}
+@include media('max','lx'){
+
+}
+
+@media(max-width:800px){
+  .challenge__header__text_block > *{
+    margin-bottom: 0px !important;
+  }
+  .challeange__header__title{
+    font-size: 26px;
+  }
+  .challeange__header__subtitle{
+    font-size: 15px;
+  }
+}
+@media(max-width:650px){
+  .challenge__header__text_block > *{
+    margin-bottom: 0px !important;
+  }
+  .challenge__header__text_block{
+    padding: 10px ;
+  }
+  .challeange__header__title{
+    padding-bottom: 0px !important  ;
+    font-size: 20px !important;
+  }
+  .challeange__header__subtitle{
+    font-size: 13px !important;
+    line-height: 20px;
+  }
+  
+}
+
+@include media('max','lg'){
+    .challenge__header__text_block{
+        padding: 10px !important;
+    }
+    .challenge__size{
+        display: flex;
+        justify-content: center;
+
+        margin: 0 auto;
+    }
+
+
+    .form_section{
+      display: flex;
+      flex-direction: column-reverse;
+      
+      .form_section_img{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+      }
+      .form_section_left > * {
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 10px !important;
+      }
+      .form_section_title{
+        padding-top: 30px !important;
+      }
+    }
+}
+
+@include media('max','md'){
+
+    .challenge__size{
+        
+        max-width:500px !important;
+        max-height: 660px !important;
+        margin-right: 0px !important;
+        display: flex;
+        justify-content: center;
+
+        margin: 0 auto;
+    }
+    .challenge__latest__blogs__photos{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-right: 0px !important;
+    }
+}
+@include media('max','sm'){
+  .challenge__header__text_block > *{
+    line-height: 20px;
+  }
+}

@@ -1,0 +1,63 @@
+.header__contact_form {
+    padding-bottom: 50px;
+    display: flex;
+    .header__contact_form_left {
+        position: relative;
+        
+    }
+   
+    .header__contact_form_inner {
+        position: relative;
+        display: flex;
+        .header__contact_form_img {
+           
+            width: 700px;
+            height: 800px;
+        }
+        .form_mail_block{
+            position: absolute;
+            top: 12%;
+            transform: translate(80%, 0%);
+            display: flex;
+            flex-direction: column;
+            padding: 80px 90px;
+            background-color: #F9EEEC;
+            
+            .header__contact_form_title {
+                max-width: 300px;
+            }
+            .header__contact_form_subtitle {
+                max-width: 450px;
+
+            }
+                .form_mail_string {
+                    .contact_form_email {
+                        width: 250px;
+                        height: 50px;
+                        border: none;
+                        margin-bottom: 10px;
+                        border-radius: 5px;
+                        background-color: white;
+                    }
+                }
+           
+            .contact_form_text {
+                border: none;
+                border-radius: 5px;
+                background-color: white;
+                margin-bottom: 10px;
+                resize: none;
+            }
+            
+            .header_form__button {
+                border: none;
+                border-radius: 5px;
+                background-color: white;
+                background-color: #F2F9FA;
+            }
+        }
+        
+    }
+    
+    
+}

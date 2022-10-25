@@ -1,0 +1,52 @@
+$sizes: ("xs":320px, "sm":576px, "md":768px, "lg":992px, "xl":1200px);
+@mixin media($minmax, $media) {
+    @each $size, $resolution in $sizes {
+      @if $media == $size {
+        @media only screen and (#{$minmax}-width: $resolution) {
+          @content;
+        }
+      } 
+    }
+}
+
+@media(max-width:1200px){
+    .form_mail_block{
+        padding: 40px 45px !important;
+        transform: translate(60%,0%) !important;
+    }
+
+}
+@include media('max','lg'){
+    .form_mail_block{
+        padding: 20px 25px !important;
+        transform: translate(50%,0%) !important;
+    }
+}
+@media (max-width:820px){
+    .header__contact_form_subtitle{
+        max-width: 350px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .form_mail_string{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact_form_text{
+        max-width: 400px;
+    }
+}
+@media (max-width:720px){
+    .header__contact_form_subtitle{
+        max-width: 250px !important; 
+    }
+   
+    .contact_form_text{
+        max-width: 300px;
+    }
+}
+@media (max-width:530px){
+    .form_mail_block{
+        transform: translate(20%,0%) !important;
+    }
+}

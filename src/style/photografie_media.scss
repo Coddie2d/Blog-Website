@@ -1,0 +1,55 @@
+$sizes: ("xs":320px, "sm":576px, "md":768px, "lg":992px, "xl":1200px);
+@mixin media($minmax, $media) {
+    @each $size, $resolution in $sizes {
+      @if $media == $size {
+        @media only screen and (#{$minmax}-width: $resolution) {
+          @content;
+        }
+      } 
+    }
+}
+@include media('min','xl'){
+    .photografie__header__text_block{
+        width: 1000px;
+    }
+    .header__text_block_inner{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transform: translate(25%,0%);
+      position: relative;
+    }
+}
+@include media('max','xl'){
+    .photografie__header__text_block{
+        padding: 20px 30px !important;
+    }
+}
+@include media('max','lg'){
+  
+}
+
+@include media('max','md'){
+  .header__title{
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .header__subtitle{
+    margin: 0 !important;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .header__name{
+    margin: 0 !important;
+  }
+  .photografie__header__text_block{
+    min-width: 400px !important;
+  }
+}
+@include media('max','sm'){
+  .photografie__header__text_block{
+    max-width: 400px !important;
+    min-width: 350px !important;
+  }
+
+}
