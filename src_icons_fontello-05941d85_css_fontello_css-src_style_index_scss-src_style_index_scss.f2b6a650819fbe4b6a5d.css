@@ -11287,7 +11287,7 @@ textarea.form-control-lg {
   width: 580px;
   height: 580px;
   background-color: #F2F9FA;
-  left: -20%;
+  left: -25%;
   transform: translate(0%, -20%);
 }
 .latest__blogs .latest__blogs__photos .latest__blogs_block {
@@ -11454,6 +11454,14 @@ textarea.form-control-lg {
     width: 240px !important;
   }
 }
+@media (min-width: 1300px) {
+  .latest__blogs__blue_circle {
+    left: 0% !important;
+  }
+  .latest__blogs__blue_circle {
+    transform: translate(0%, -20%);
+  }
+}
 @media only screen and (max-width: 992px) {
   .header__link {
     margin: 0 20px !important;
@@ -11462,11 +11470,17 @@ textarea.form-control-lg {
     min-width: 500px !important;
   }
   .about__me_left {
-    padding-right: 0px !important;
+    padding-right: 0 !important;
   }
   .about__me_left {
     padding-bottom: 20px;
     position: relative;
+  }
+  .about__me__author_img_blackAndWhite {
+    left: 40% !important;
+    top: 40% !important;
+    width: 200px !important;
+    height: 250px !important;
   }
   .about__me_button {
     padding-bottom: 6px !important;
@@ -11742,6 +11756,10 @@ textarea.form-control-lg {
 }
 .photografie__about__me {
   padding-top: 300px !important;
+}
+
+.pt {
+  padding-top: 150px;
 }
 
 @media only screen and (min-width: 1200px) {
